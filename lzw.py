@@ -28,15 +28,14 @@ def encode(msg, table):
 
 def decode(op, table):
     old = op[0]
-    s = table[old]
-    output = s
+    output = table[old]
     for n in op[1:]:
         if n not in table:
-            s = table[old] + s[0]
+            table[n] = table[old] + table[old][0]
         else:
-            s = table[n]
-        output += s
-        table[len(table)] = table[old] + s[0]
+            table[len(table)] = table[old] + table[n][0]
+        output += table[n]
+
         old = n
     return output
 
