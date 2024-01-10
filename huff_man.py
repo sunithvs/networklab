@@ -58,3 +58,17 @@ def print_nodes(node, val=''):
 
 
 print_nodes(nodes[0])
+
+"""
+calculating the above list of chars and freq from a string
+msg="ABSAFVJHSFKJNSDKCLKJXKCNSKJNSAJLSAJNKLDNSDSNDKNSAJNSK"
+lst = list(msg)
+chars = list(set(lst))
+freq = []
+for i in set(lst):
+    res.append(lst.count(i))
+print(res)
+"""
+
+
+
